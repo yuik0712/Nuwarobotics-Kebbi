@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!-- 권한 설정 -->
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+<application
+    android:name=".NuwaApplication"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:replace="android:icon"
+    android:label="@string/app_name"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+
+    <activity
+        android:name=".MainActivity"
+        android:theme="@style/AppTheme.NoActionBar">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+    <!-- 생명주기 -->
+    <activity android:name=".sample.SampleActivity" android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".voice.WakeupActivity" android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".voice.LocalcmdActivity" android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".voice.CloudASRActivity" android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".voice.LocalcmdAndCloudASRActivity" android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".voice.TTSActivity" android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".motor.MotorControlActivity" android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".motor.MovementControlActivity" android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".motion.MotionTtsExampleActivity" android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".led.LEDExampleActivity" android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".sensor.SensorExampleActivity" android:theme="@style/AppTheme.NoActionBar" />
+
+    <!-- Motion SDK -->
+    <activity android:name=".motion.MotionSDKExampleActivity" android:theme="@style/SDK.Motion.Example.Primary.Theme" />
+    <activity android:name=".motion.demo.QueryMotionActivity" android:theme="@style/SDK.Motion.Example.Primary.Theme" />
+    <activity android:name=".motion.demo.ControlMotionActivity" android:theme="@style/SDK.Motion.Example.Primary.Theme" />
+    <activity android:name=".motion.demo.PlayMotionActivity" android:theme="@style/SDK.Motion.Example.Primary.Theme" />
+    <activity android:name=".motion.demo.PlayMotionFileActivity" android:theme="@style/SDK.Motion.Example.Primary.Theme" />
+    <activity android:name=".motion.demo.WindowControlWithMotionActivity" android:theme="@style/SDK.Motion.Example.Primary.Theme" />
+    <activity android:name=".activity.DisablePowerkeyExampleActivity" android:theme="@style/SDK.Motion.Example.Primary.Theme" />
+    <activity android:name=".activity.FaceControlExampleActivity" android:theme="@style/SDK.Motion.Example.Primary.Theme" />
+    <activity android:name=".activity.startNuwaFaceRecognitionActivity" android:theme="@style/SDK.Motion.Example.Primary.Theme" />
+    <activity android:name=".activity.TemperatureMeasure" android:theme="@style/SDK.Motion.Example.Primary.Theme" />
+    <activity android:name=".activity.VideoCall" android:theme="@style/SDK.Motion.Example.Primary.Theme" />
+    <activity android:name=".activity.StartNuwaAuthorizationActivity" android:theme="@style/AppTheme.NoActionBar" />
+</application>
+
+</manifest>
