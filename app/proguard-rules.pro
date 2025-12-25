@@ -19,3 +19,22 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# WebRTC ProGuard rules
+-keep class org.webrtc.** { *; }
+-keep class org.chromium.** { *; }
+-dontwarn org.webrtc.**
+-dontwarn org.chromium.**
+
+
+# OkHttp (already included but ensuring compatibility)
+-dontwarn okhttp3.**
+-dontwarn okio.**
+-keep class okhttp3.** { *; }
+-keep class okio.** { *; }
+
+# Gson
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
